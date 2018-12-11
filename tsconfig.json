@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "rkm-profile-image": [
+        "dist/rkm-profile-image"
+      ],
+      "rkm-profile-image/*": [
+        "dist/rkm-profile-image/*"
+      ]
+    }
   }
 }

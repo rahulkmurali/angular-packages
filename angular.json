@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "rkm-profile-image": {
+      "root": "projects/rkm-profile-image",
+      "sourceRoot": "projects/rkm-profile-image/src",
+      "projectType": "library",
+      "prefix": "rkm",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/rkm-profile-image/tsconfig.lib.json",
+            "project": "projects/rkm-profile-image/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rkm-profile-image/src/test.ts",
+            "tsConfig": "projects/rkm-profile-image/tsconfig.spec.json",
+            "karmaConfig": "projects/rkm-profile-image/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/rkm-profile-image/tsconfig.lib.json",
+              "projects/rkm-profile-image/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "angular-packages"
